@@ -21,11 +21,11 @@ class App extends Component {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    this.setState({name, email, password, isRegistered:true})
+    this.setState({name, email, password, isRegistered :true})
     event.preventDefault()
   }
 
-  showPasswordHandler = ()=>{
+  showPasswordHandler = () =>{
     console.log(this.state);
     this.setState({showPass : !this.state.showPass}, ()=> {
     console.log(this.state);
