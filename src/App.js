@@ -33,10 +33,11 @@ class App extends Component {
   }
 
   render() {
-    return
+    return (
       <div>
         {this.state.isRegistered ? (<Greet name={this.state.name} email={this.state.email}></Greet>) : (<Register submit={this.registrationHandler} showPass={this.state.showPass} click={this.showPasswordHandler}></Register>)}
       </div>
+    )
   }
 }
 
