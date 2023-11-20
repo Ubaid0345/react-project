@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Styled from 'styled-components';
 
 export default function Register(props) {
   // const btnStyle = {
@@ -19,7 +20,21 @@ export default function Register(props) {
     btnClasses.push("btn-success");
 
   }
-  console.log(btnClasses.join(" "));
+  const StyledButton = Styled.button`
+  display:block;
+  padding:10px 5px;
+  background-color:orange;
+  border:none;
+  color:white;
+  width:100%;
+  margin:5px`;
+
+  // const StyledDiv =Styled.div`
+  // background-color:red;
+  // width:400px;
+  // height:300px;
+  // `;
+  // console.log(btnClasses.join(" "));
   return (
     <div className='container card p-3 mt-2 register-container'>
         <h1 className='text-center'>Registration Form</h1>
@@ -43,6 +58,8 @@ export default function Register(props) {
       onClick={props.click} 
       // style={btnStyle}
       >{btnText} </button>
+      <StyledButton type='button'>login</StyledButton>
+      {/* <StyledDiv></StyledDiv> */}
     </form>
   </div>
   );
