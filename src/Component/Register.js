@@ -21,12 +21,12 @@ export default function Register(props) {
 
   }
   const StyledButton = Styled.button`
-  display:block;
+  display:${(props) => props.flag ? "inline-block" : "block"};
   padding:10px 5px;
-  background-color:orange;
+  background-color:${(props) => props.color};
   border:none;
   color:white;
-  width:100%;
+  width:${(props) => props.flag === "1" ? "45%" : "100%"};
   margin:5px`;
 
   const StyledRegisterContainer = Styled.div`
@@ -78,7 +78,10 @@ export default function Register(props) {
           onClick={props.click}
         // style={btnStyle}
         >{btnText} </button>
-        <StyledButton type='button'>login</StyledButton>
+        <br/>
+        <StyledButton type='button' flag="1" color="orange">login</StyledButton>
+        <StyledButton type='button' flag="1" color="green">login with google</StyledButton>
+        <StyledButton type='button' flag="0" color="blue">login with yahoo</StyledButton>
         {/* <StyledDiv></StyledDiv> */}
       </form>
     </StyledRegisterContainer>
